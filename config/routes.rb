@@ -11,6 +11,12 @@ Blinder::Application.routes.draw do
   delete 'signout', to: 'sessions#destroy', as: 'signout'
 
   controller :collect do
+    get    '/new', action: :new
+    post   '/new', action: :create
+    get    '/thanks', action: :thanks, as: :thanks_no
+    get    '/edit', action: :edit
+    patch  '/edit', action: :update
+
     get    ':event_slug', action: :home, as: :event
     get    ':event_slug/new', action: :new, as: :proposals
     get    'thanks/:slug', action: :thanks, as: :thanks
