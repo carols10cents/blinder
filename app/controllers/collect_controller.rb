@@ -13,7 +13,13 @@ class CollectController < ApplicationController
   end
 
   def new
-    @event = Event.includes(blinds: :questions).where(slug: params[:event_slug]).first.decorate
+    if params[:event_slug]
+      @event = Event.where(slug: params[:event_slug]).includes(blinds: :questions).first
+    else
+      @event = Event.active.any? ? Event.active.includes(blinds: :questions).first : Event.includes(blinds: :questions).last
+    end
+    @event = @event.decorate
+
     redirect_to root_path unless @event.can_propose?
 
     @proposal = Proposal.new

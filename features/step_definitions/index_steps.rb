@@ -16,5 +16,5 @@ And(/^verify that text 'Talk Information' is present on the page$/) do
 end
 
 Given(/^that I am unauthenticated and I visit the root page$/) do
-  p @b.goto 'http://127.0.0.1:3000/'
+  p @b.goto 'http://localhost:5000/'
 end
