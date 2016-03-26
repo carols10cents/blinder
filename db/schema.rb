@@ -13,10 +13,7 @@
 
 ActiveRecord::Schema.define(version: 20140923213110) do
 
-  # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
-
-  create_table "blinds", force: true do |t|
+  create_table "blinds", force: :cascade do |t|
     t.integer  "level"
     t.integer  "event_id"
     t.string   "title"
@@ -26,7 +23,7 @@ ActiveRecord::Schema.define(version: 20140923213110) do
     t.integer  "position"
   end
 
-  create_table "events", force: true do |t|
+  create_table "events", force: :cascade do |t|
     t.string   "title"
     t.integer  "blind_level"
     t.text     "info"
@@ -39,9 +36,9 @@ ActiveRecord::Schema.define(version: 20140923213110) do
     t.string   "slug"
   end
 
-  add_index "events", ["slug"], name: "index_events_on_slug", using: :btree
+  add_index "events", ["slug"], name: "index_events_on_slug"
 
-  create_table "notes", force: true do |t|
+  create_table "notes", force: :cascade do |t|
     t.integer  "user_id"
     t.integer  "proposal_id"
     t.text     "content"
@@ -49,7 +46,7 @@ ActiveRecord::Schema.define(version: 20140923213110) do
     t.datetime "updated_at"
   end
 
-  create_table "proposals", force: true do |t|
+  create_table "proposals", force: :cascade do |t|
     t.integer  "event_id"
     t.text     "slug"
     t.datetime "created_at"
@@ -57,9 +54,9 @@ ActiveRecord::Schema.define(version: 20140923213110) do
     t.boolean  "safe_for_review", default: false
   end
 
-  add_index "proposals", ["slug"], name: "index_proposals_on_slug", using: :btree
+  add_index "proposals", ["slug"], name: "index_proposals_on_slug"
 
-  create_table "questions", force: true do |t|
+  create_table "questions", force: :cascade do |t|
     t.integer  "blind_id"
     t.string   "label"
     t.string   "kind"
@@ -72,7 +69,7 @@ ActiveRecord::Schema.define(version: 20140923213110) do
     t.boolean  "sortable",   default: false
   end
 
-  create_table "responses", force: true do |t|
+  create_table "responses", force: :cascade do |t|
     t.integer  "proposal_id"
     t.integer  "question_id"
     t.text     "value"
@@ -80,7 +77,7 @@ ActiveRecord::Schema.define(version: 20140923213110) do
     t.datetime "updated_at"
   end
 
-  create_table "scrubs", force: true do |t|
+  create_table "scrubs", force: :cascade do |t|
     t.integer  "response_id"
     t.integer  "blind_level"
     t.text     "value"
@@ -88,7 +85,7 @@ ActiveRecord::Schema.define(version: 20140923213110) do
     t.datetime "updated_at"
   end
 
-  create_table "users", force: true do |t|
+  create_table "users", force: :cascade do |t|
     t.string   "provider"
     t.string   "uid"
     t.string   "name"

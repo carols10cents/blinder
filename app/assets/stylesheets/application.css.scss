@@ -127,7 +127,7 @@ footer {
   @include media(790px) {
     &.other { @include span-columns(6); @include omega(2n); }
     &.large { @include span-columns(12); }
-    &.small { @include span-columns(4.5); }
+    &.small { @include span-columns(5.5); }
   }
 
   label {
@@ -136,7 +136,8 @@ footer {
     &.radio {
       font-weight: 300;
       float: left;
-      margin: 0 1rem 0 0;
+      margin: 0 1rem;
+      width: 20rem;
     }
     &.required::before {
       content: "* ";
