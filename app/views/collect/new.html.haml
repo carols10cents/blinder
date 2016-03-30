@@ -1,23 +1,24 @@
-%h2= form_title_for @proposal 
+.event_info
+  %h2= form_title_for @proposal
 
-- if @errors
-  = render partial: 'shared/errors', locals: { errors: @errors }
+  - if @errors
+    = render partial: 'shared/errors', locals: { errors: @errors }
 
-%p.info
-  %span.required *
-  indicates a required field. You can use
-  = link_to "Markdown", "http://whatismarkdown.com/", target: "_blank"
-  to add formatting to your submission!
+  %p.info
+    %span.required *
+    indicates a required field. You can use
+    = link_to "Markdown", "http://whatismarkdown.com/", target: "_blank"
+    to add formatting to your submission!
 
-= form_for @proposal do |f|
-  - @event.blinds.each do |blind|
+  = form_for @proposal do |f|
+    - @event.blinds.each do |blind|
+      %section{ class: "blind" }
+        %h3.title!= blind.title
+        %p.info!= blind.info
+        = render blind.responses
     %section{ class: "blind" }
-      %h3.title!= blind.title
-      %p.info!= blind.info
-      = render blind.responses
-  %section{ class: "blind" }
-    .question.other
-      = label_tag "human_key", "To help us keep spam down, please enter '#{@event.human_key}' here.", class: 'required'
-      = text_field_tag "human_key"
+      .question.other
+        = label_tag "human_key", "To help us keep spam down, please enter '#{@event.human_key}' here.", class: 'required'
+        = text_field_tag "human_key"
 
-  = f.submit 'Submit Proposal', { class: "collect--submit" }
+    = f.submit 'Submit Proposal', { class: "collect--submit" }

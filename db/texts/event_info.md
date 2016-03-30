@@ -1,3 +1,4 @@
+## Oct 27 & 28, 2016 - Pittsburgh, PA
 ## 2016 Call for Proposals (CFP)
 
 <strong>Submissions are open until April 30, 2016 at 5pm ET.</strong> All submitters will be notified about whether they have been selected or not by the end of May at the latest.

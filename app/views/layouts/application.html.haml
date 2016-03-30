@@ -18,7 +18,9 @@
 
   %body
     %header
-      %h1.logo Open Source & Feelings
+      %h1.logo
+        = link_to "http://www.rust-belt-rust.com" do
+          = image_tag "rust-belt-rust.jpg", alt: "Rust Belt Rust Conference Home"
     %main
       .notice= flash[:notice]
       = render 'shared/user_nav'
@@ -26,6 +28,6 @@
     %footer
       %address
         %ul
-          %li= link_to "Code of Conduct", "#", class: 'footer-link conduct'
+          %li= link_to "Code of Conduct", "http://www.rust-belt-rust.com/conduct.html", class: 'footer-link conduct'
           %li= mail_to ENV['CFP_FROM'], ENV['CFP_FROM'], class: 'footer-link mail'
-          %li= link_to "Twitter", "#", class: 'footer-link twitter'
+          %li= link_to "Twitter", "https://twitter.com/rustbeltrust", class: 'footer-link twitter'
