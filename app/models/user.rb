@@ -1,3 +1,5 @@
+require_relative '../../lib/user_cans'
+
 class User < ActiveRecord::Base
   has_many :notes
 
@@ -41,7 +43,7 @@ class User < ActiveRecord::Base
   end
 
   protected
-  
+
   def cans
     UserCans.find_for self
   end
