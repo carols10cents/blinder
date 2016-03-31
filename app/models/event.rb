@@ -15,7 +15,7 @@ class Event < ActiveRecord::Base
   end
 
   def is_a_human?(key)
-    key.downcase.gsub(/'"/, '').strip == human_key
+    key.downcase.gsub(/['"]/, '').strip == human_key
   end
 
   # overload method to give the slug instead of the id if its present

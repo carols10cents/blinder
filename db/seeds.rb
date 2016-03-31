@@ -1,7 +1,7 @@
 # Core Event & associated Blinds
 event = Event.create! title: 'Rust Belt Rust 2016',
   blind_level: 0,
-  human_key: "RBR2016",
+  human_key: "rbr2016",
   slug: "rbr2016",
   active: true,
   info: File.read('db/texts/event_info.md')
