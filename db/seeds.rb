@@ -51,7 +51,8 @@ Question.create! blind: personal_info, required: false, label: "Anything else yo
 
 
 Question.create! blind: talk_info, required: true, label: "Talk Title", kind: "text", position: position(true)
-Question.create! blind: talk_info, required: true, label: "Talk Abstract", kind: "textarea", position: position
+Question.create! blind: talk_info, required: true, label: "Talk Abstract (what will go on the website to promote your talk)", kind: "textarea", position: position
+Question.create! blind: talk_info, required: false, label: "Notes for reviewers (additional info about what you might cover, any logistical needs you might have)", kind: "textarea", position: position
 Question.create! blind: talk_info, required: true, label: "What format would work best for this talk?", kind: "radio", values: "30 minute talk,3 hour workshop,6 hour workshop,Any/other (please explain in the next field)", position: position, group: "format"
 Question.create! blind: talk_info, required: false, label: "If you answered 'Any/other' for the format question, please explain here:", kind: "textarea", position: position
 Question.create! blind: talk_info, required: true, label: "Who's your ideal audience?", kind: "textarea", position: position
