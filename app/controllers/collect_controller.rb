@@ -37,6 +37,12 @@ class CollectController < ApplicationController
     @is_a_human = @event.is_a_human?(params[:human_key])
 
     params.permit! # this is a terrible idea; someone please do this right.
+    params[:responses].map { |hash|
+      if hash[:value].is_a? Hash
+        hash[:value] = hash[:value].values.first
+      end
+      hash
+    }
     @proposal.responses.build(params[:responses])
 
     if @is_a_human && @proposal.save
