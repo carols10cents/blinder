@@ -78,6 +78,9 @@ class CollectController < ApplicationController
 
     @proposal.responses.each do |response|
       selected = response_update_params.find { |param| param[:id] == response.id.to_s }
+      if selected[:value].is_a? Hash
+        selected[:value] = selected[:value].values.first
+      end
       response.update(selected) if selected
     end
 
@@ -110,7 +113,8 @@ class CollectController < ApplicationController
   end
 
   def response_update_params
-    params.permit(responses: [:id, :question_id, :value]).require(:responses)
+    params.permit!
+    params[:responses]
   end
 
   def send_confirmation_email
