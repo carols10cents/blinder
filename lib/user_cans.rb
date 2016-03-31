@@ -1,3 +1,5 @@
+require_relative './can'
+
 class UserCans
   def self.find_for user
     role_class = user.role.gsub(' ', '_').classify
