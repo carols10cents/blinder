@@ -7,7 +7,7 @@ class Proposal < ActiveRecord::Base
 
   after_create :generate_slug
 
-  scope :listing,     -> { select(:id, :slug, :updated_at) }
+  scope :listing,     -> { select(:id, :slug, :updated_at, :created_at) }
   scope :order_submitted, -> { order('created_at ASC') }
   scope :for_event,   -> (event_id) { listing.order_submitted.where(event_id: event_id, safe_for_review: true) }
   scope :unsafe,      -> { listing.order_submitted.where(safe_for_review: false) }

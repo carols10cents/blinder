@@ -1,4 +1,8 @@
 module ReviewHelper
+  def created_at(proposal)
+    proposal.created_at.strftime("%r %D")
+  end
+
   def last_updated(proposal)
     proposal.updated_at.strftime("%r %D")
   end
