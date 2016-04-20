@@ -8,10 +8,10 @@ class Proposal < ActiveRecord::Base
   after_create :generate_slug
 
   scope :listing,     -> { select(:id, :slug, :updated_at) }
-  scope :most_recent, -> { order('updated_at DESC') }
-  scope :for_event,   -> (event_id) { listing.most_recent.where(event_id: event_id, safe_for_review: true) }
-  scope :unsafe,      -> { listing.most_recent.where(safe_for_review: false) }
-  scope :safe,        -> { listing.most_recent.where(safe_for_review: true) }
+  scope :order_submitted, -> { order('created_at ASC') }
+  scope :for_event,   -> (event_id) { listing.order_submitted.where(event_id: event_id, safe_for_review: true) }
+  scope :unsafe,      -> { listing.order_submitted.where(safe_for_review: false) }
+  scope :safe,        -> { listing.order_submitted.where(safe_for_review: true) }
 
   accepts_nested_attributes_for :responses
 
