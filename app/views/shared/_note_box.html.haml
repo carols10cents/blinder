@@ -2,6 +2,10 @@
 = form_for notes, remote: true do |f|
   = f.hidden_field :id
   = f.hidden_field :proposal_id, value: proposal.id
+  .score
+    = f.label :score, 'Score: '
+    = f.select :score, [[0.0, 0.0], [0.5, 0.5], [1.0, 1.0], [1.5, 1.5], [2.0, 2.0], [2.5, 2.5], [3.0, 3.0], [3.5, 3.5], [4.0, 4.0], [4.5, 4.5], [5.0, 5.0]], include_blank: true
+    %span 0: worst, 5: best
   .note= f.text_area :content
   .submit
     .status

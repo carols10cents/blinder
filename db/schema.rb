@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140923213110) do
+ActiveRecord::Schema.define(version: 20160420151445) do
 
   create_table "blinds", force: :cascade do |t|
     t.integer  "level"
@@ -44,6 +44,7 @@ ActiveRecord::Schema.define(version: 20140923213110) do
     t.text     "content"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.decimal  "score"
   end
 
   create_table "proposals", force: :cascade do |t|
