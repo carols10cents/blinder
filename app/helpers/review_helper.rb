@@ -9,7 +9,7 @@ module ReviewHelper
 
   def notes_for(proposal)
     notes = proposal.notes_for_user(current_user)
-    if notes then "(#{ notes.content.truncate(50) })" else '' end
+    if notes then notes.content.truncate(50) else '' end
   end
 
   def scrub_vars_for(response)
