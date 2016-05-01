@@ -19,6 +19,7 @@ Blinder::Application.routes.draw do
 
     get    ':event_slug', action: :home, as: :event
     get    ':event_slug/new', action: :new, as: :proposals
+    get    ':event_slug/late', action: :late
     get    'thanks/:slug', action: :thanks, as: :thanks
     get    'edit/:slug', action: :edit, as: :proposal
     post   ':event_slug/new', action: :create

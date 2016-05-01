@@ -29,6 +29,21 @@ class CollectController < ApplicationController
     end
   end
 
+  def late
+    if params[:event_slug]
+      @event = Event.where(slug: params[:event_slug]).includes(blinds: :questions).first
+    else
+      @event = Event.active.any? ? Event.active.includes(blinds: :questions).first : Event.includes(blinds: :questions).last
+    end
+    @event = @event.decorate
+
+    @proposal = Proposal.new
+
+    @event.blinds.each do |blind|
+      blind.new_responses_for @proposal
+    end
+  end
+
   def create
     @proposal   = Proposal.new(proposal_create_params)
     @event      = Event.where(slug: params[:event_slug]).first
