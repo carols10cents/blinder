@@ -34,6 +34,6 @@
           %td
             = num_scores == 0 ? "n/a" : "%0.2f" % (total / num_scores)
           %td
-            = scores.join(", ")
+            = scores.sort.join(", ")
           %td
             = num_scores
