@@ -12,11 +12,18 @@
         - @sortable_questions.each do |question|
           %th.sortable= question.label
         %th
+          Avg score
+        %th
+          \# of scores
+        %th
           Created
         %th
           Updated
     %tbody
       - @proposals.each do |proposal|
+        - scores = Note.where(proposal: proposal).where('score IS NOT NULL').pluck(:score)
+        - num_scores = scores.count
+        - total = scores.sum
         %tr
           %td
             = link_to proposal.slug[0,6], review_path(@event, proposal), class: 'slug'
@@ -26,5 +33,9 @@
           - @sortable_questions.each do |question|
             - response = proposal.response_for_question(question)
             %td!= response.value_without_scrub_markers
+          %td
+            = num_scores == 0 ? "n/a" : total / num_scores
+          %td
+            = num_scores
           %td.created= created_at proposal
           %td.updated= last_updated proposal
