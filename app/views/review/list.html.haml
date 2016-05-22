@@ -34,7 +34,7 @@
             - response = proposal.response_for_question(question)
             %td!= response.value_without_scrub_markers
           %td
-            = num_scores == 0 ? "n/a" : total / num_scores
+            = num_scores == 0 ? "n/a" : "%0.2f" % (total / num_scores)
           %td
             = num_scores
           %td.created= created_at proposal
