@@ -14,11 +14,9 @@
         %th
           Avg score
         %th
+          Raw scores
+        %th
           \# of scores
-        %th
-          Created
-        %th
-          Updated
     %tbody
       - @proposals.each do |proposal|
         - scores = Note.where(proposal: proposal).where('score IS NOT NULL').pluck(:score)
@@ -36,6 +34,6 @@
           %td
             = num_scores == 0 ? "n/a" : "%0.2f" % (total / num_scores)
           %td
+            = scores.join(", ")
+          %td
             = num_scores
-          %td.created= created_at proposal
-          %td.updated= last_updated proposal
