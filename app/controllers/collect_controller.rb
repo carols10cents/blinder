@@ -1,5 +1,3 @@
-require 'postmark'
-
 class CollectController < ApplicationController
 
   ROBOT_ERROR = "There was a problem validating your <span>human key</span>. Please try again.".html_safe
