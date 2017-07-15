@@ -1,17 +1,17 @@
-## Oct 27 & 28, 2016 - Pittsburgh, PA
-## 2016 Call for Proposals (CFP)
+## Oct 26 & 27, 2017 - Columbus, OH
+## 2017 Call for Proposals (CFP)
 
-<strong>Submissions are open until April 30, 2016 at 5pm ET.</strong> All submitters will be notified about whether they have been selected or not by the end of May at the latest.
+<strong>Submissions are open until Mon Aug 7, 2017 at 5pm ET.</strong> All submitters will be notified about whether they have been selected or not by the end of August at the latest.
 
-We're so excited that you're submitting to Rust Belt Rust 2016! If you have any questions, please email <a href="mailto:cfp@rust-belt-rust.com">cfp@rust-belt-rust.com</a>. That address goes to Rust Belt Rust organizers who have recused themselves from the blinded rounds of review.
+We're so excited that you're submitting to Rust Belt Rust 2017! If you have any questions, please email <a href="mailto:cfp@rust-belt-rust.com">cfp@rust-belt-rust.com</a>. That address goes to Rust Belt Rust organizers who have recused themselves from the blinded rounds of review.
 
 Please feel free to submit more than one proposal! We will only choose at most one talk per person.
 
-By submitting, you are agreeing to abide by our <a href="http://www.rust-belt-rust.com/conduct.html">code of conduct</a>.
+Speakers are required to agree to abide by our <a href="http://www.rust-belt-rust.com/conduct.html">code of conduct</a>.
 
 ### What we're looking for
 
-Rust Belt Rust 2016 is going to be two days long. Day 1 will be for more interactive, longer workshop-style talks. Both full (6 hour) and half (3 hour) day workshops will be considered. Day 2 will be a single track of talks around 30 minutes in length.
+Rust Belt Rust 2017 is going to be two days long. Day 1 will be for more interactive, longer workshop-style talks. Both full (6 hour) and half (3 hour) day workshops will be considered. Day 2 will be a single track of talks around 30 minutes in length.
 
 We're open to any topics related to the Rust programming language!
 

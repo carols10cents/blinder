@@ -1,8 +1,8 @@
 # Core Event & associated Blinds
-event = Event.create! title: 'Rust Belt Rust 2016',
+event = Event.create! title: 'Rust Belt Rust 2017',
   blind_level: 0,
-  human_key: "rbr2016",
-  slug: "rbr2016",
+  human_key: "rbr2017",
+  slug: "rbr2017",
   active: true,
   info: File.read('db/texts/event_info.md')
 
@@ -40,11 +40,16 @@ consent_label = <<-CONSENT
 Do you consent to this conference recording and then distributing on the internet your talk/presentation with a CC-BY license?
 CONSENT
 
+conduct_label = <<-CONDUCT
+Do you agree to abide by the <a href="http://www.rust-belt-rust.com/conduct.html">code of conduct</a>?
+CONDUCT
+
 # Questions for the Blinds!
 Question.create! blind: personal_info, required: true, label: "Name", kind: "text", position: position(true)
 Question.create! blind: personal_info, required: true, label: "Email Address", kind: "email", position: position
 Question.create! blind: personal_info, required: true, label: "Phone Number (ex 1 412 555 5555)", kind: "tel", position: position
 Question.create! blind: personal_info, required: true, label: consent_label, kind: "radio", values: "Yes,No", position: position, group: "recording_consent"
+Question.create! blind: personal_info, required: true, label: conduct_label, kind: "radio", values: "Yes,No", position: position, group: "conduct"
 Question.create! blind: personal_info, required: false, label: "Twitter", kind: "text", position: position
 Question.create! blind: personal_info, required: false, label: "Main Website", kind: "text", position: position
 Question.create! blind: personal_info, required: false, label: "Anything else you'd like us to know?", kind: "textarea", position: position
