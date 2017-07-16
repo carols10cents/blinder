@@ -21,21 +21,9 @@ input.collect--submit {
   margin-top: 2rem;
 }
 
-
-header {
-  padding: 0;
-}
-
-.logo {
-  overflow: hidden;
-  white-space: nowrap;
-
-  img {
-      margin: 0 auto;
-      display: block;
-      width: 850px;
-
-  }
+h1 {
+  margin: 3rem auto;
+  font-size: 3.5rem;
 }
 
 footer {
@@ -176,9 +164,6 @@ footer {
 
   h5 {
     clear: both;
-    a {
-      font-size: .6rem;
-    }
   }
 
   .value {
@@ -193,8 +178,8 @@ footer {
 
 .event_info {
   @include media(790px) {
-    @include span-columns(10);
-    @include shift(1);
+    @include span-columns(8);
+    margin: 0 auto;
   }
 
   h3 {
