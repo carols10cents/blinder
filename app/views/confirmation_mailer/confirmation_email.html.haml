@@ -1,0 +1,17 @@
+%h2 Thank you!
+%p
+  We've received your proposal.
+  If you have any questions or concerns, please contact our
+  != "#{ mail_to ENV['CFP_FROM'], "CFP Team" }."
+%p
+  Below is a copy of your submitted proposal. If you discover any errors or omissions, you can
+  = link_to "edit your proposal.", proposal_url(@proposal.slug)
+  You're welcome to edit this proposal until the CFP closes.
+
+.review_proposal
+%h3= "Your proposal for #{ @proposal.event.title }"
+
+- @proposal.event.blinds.each do |blind|
+  %section{ class: "blind" }
+    %h4!= blind.title
+    = render partial: 'review/markdown_response', collection: @proposal.responses_for(blind)

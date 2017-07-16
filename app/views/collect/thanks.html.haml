@@ -16,4 +16,4 @@
     - @proposal.event.blinds.each do |blind|
       %section{ class: "blind" }
         %h4!= blind.title
-        = render partial: 'review/response', collection: @proposal.responses_for(blind)
+        = render partial: 'review/markdown_response', collection: @proposal.responses_for(blind)
