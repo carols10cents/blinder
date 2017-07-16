@@ -15,11 +15,7 @@ module CollectHelper
   end
 
   def size_class_for(response)
-    case response.question.kind
-      when "textarea" then 'large'
-      when "radio"    then 'small'
-      else "other"
-    end
+    "large"
   end
 
   def classes_for(question)

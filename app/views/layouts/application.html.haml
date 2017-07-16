@@ -16,11 +16,10 @@
     = csrf_meta_tags
 
   %body
-    %header
-      %h1.logo
-        = link_to "http://www.rust-belt-rust.com" do
-          = image_tag "rust-belt-rust.jpg", alt: "Rust Belt Rust Conference Home"
     %main
+      %h1
+        = link_to "https://www.rust-belt-rust.com" do
+          Rust Belt Rust 2017 CFP
       .notice= flash[:notice]
       = render 'shared/user_nav'
       .content= yield
