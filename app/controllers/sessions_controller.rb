@@ -4,7 +4,7 @@ class SessionsController < ApplicationController
     if user
       session[:user_id] = user.id
       flash[:notice] = "Signed In"
-      redirect_to "/review/rbr2016"
+      redirect_to "/review/rbr2017"
     else
       flash[:notice] = "Not Authorized"
       redirect_to root_url
