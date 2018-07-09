@@ -1,8 +1,8 @@
 # Core Event & associated Blinds
-event = Event.create! title: 'Rust Belt Rust 2017',
+event = Event.create! title: 'Rust Belt Rust 2018',
   blind_level: 0,
-  human_key: "rbr2017",
-  slug: "rbr2017",
+  human_key: "rbr2018",
+  slug: "rbr2018",
   active: true,
   info: File.read('db/texts/event_info.md')
 
@@ -27,7 +27,7 @@ balancing_info = Blind.create! event: event,
 make_life_easier = Blind.create! event: event,
   level: 10,
   title: "Making Life Easier",
-  info: "If your proposal is selected, there are a few pieces of information we need to properly celebrate/publicise your talk. These items are optional, but they really do make our lives easier. :)",
+  info: "If your proposal is selected, there are a few pieces of information we need to properly celebrate/publicize/set up for your talk. These items are not shared with the selection committee, but they really do make our lives easier. :)",
   position: 4
 
 position = -1
@@ -41,7 +41,7 @@ Do you consent to this conference recording your talk/presentation and then dist
 CONSENT
 
 conduct_label = <<-CONDUCT
-Do you agree to abide by the <a href="http://www.rust-belt-rust.com/conduct.html">code of conduct</a>?
+Do you agree to abide by the <a href="https://rust-belt-rust.com/conduct/">code of conduct</a>?
 CONDUCT
 
 # Questions for the Blinds!
@@ -63,23 +63,22 @@ Question.create! blind: talk_info, required: false, label: "If you answered 'Any
 Question.create! blind: talk_info, required: true, label: "Who's your ideal audience?", kind: "textarea", position: position
 Question.create! blind: talk_info, required: true, label: "Why are you excited to talk about this?", kind: "textarea", position: position
 
-Question.create! blind: make_life_easier, required: true, label: "Bio for the website, about a paragraph", kind: "textarea", position: position
-Question.create! blind: make_life_easier, required: true, label: "URL to a headshot or avatar", kind: "text", position: position(true)
-Question.create! blind: make_life_easier, required: true, label: "T-shirt cut", kind: "radio", values: "Boxy,Fitted", position: position, group: "shirt_cut"
-Question.create! blind: make_life_easier, required: true, label: "T-shirt size", kind: "radio", values: "XS,S,M,L,XL,2XL,3XL,4XL,5XL", position: position, group: "shirt_size"
-
 Question.create! blind: balancing_info, required: false, label: "What is your previous speaking experience? We'd like to have a good mix of new and experienced speakers.", kind: "textarea", position: position(true)
 Question.create! blind: balancing_info, required: false, label: "Have you presented on this topic at other events? If so, where and when?", kind: "textarea", position: position
 Question.create! blind: balancing_info, required: false, label: "Are you from the Rust Belt? We'd love to have some speakers from the region as well as people from outside it!", kind: "textarea", position: position
 
-# # Admin users
-# admins = [
-#   { uid: 11111,  name: 'You' },
-# ]
-#
-# admins.each do |admin|
-#   User.create! uid: admin[:uid], name: admin[:name], role: 'admin', provider: 'github'
-# end
+Question.create! blind: make_life_easier, required: true, label: "Bio for the website, about a paragraph", kind: "textarea", position: position
+Question.create! blind: make_life_easier, required: true, label: "URL to a headshot or avatar", kind: "text", position: position(true)
+Question.create! blind: make_life_easier, required: true, label: "Will you need childcare?", kind: "radio", values: "Yes,No", position: position, group: "childcare"
+
+# Admin users
+admins = [
+  { uid: 193874,  name: 'carols10cents' },
+]
+
+admins.each do |admin|
+  User.create! uid: admin[:uid], name: admin[:name], role: 'admin', provider: 'github'
+end
 #
 # # Review users
 # reviewers = [
