@@ -19,13 +19,13 @@
     %main
       %h1
         = link_to "https://www.rust-belt-rust.com" do
-          Rust Belt Rust 2017 CFP
+          Rust Belt Rust 2018 CFP
       .notice= flash[:notice]
       = render 'shared/user_nav'
       .content= yield
     %footer
       %address
         %ul
-          %li= link_to "Code of Conduct", "http://www.rust-belt-rust.com/conduct.html", class: 'footer-link conduct'
+          %li= link_to "Code of Conduct", "https://www.rust-belt-rust.com/conduct", class: 'footer-link conduct'
           %li= mail_to ENV['CFP_FROM'], ENV['CFP_FROM'], class: 'footer-link mail'
           %li= link_to "Twitter", "https://twitter.com/rustbeltrust", class: 'footer-link twitter'
