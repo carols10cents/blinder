@@ -20,7 +20,7 @@ gem 'pg', '~> 0.17.1'
 
 gem 'draper', '~>1.3'
 
-gem 'newrelic_rpm', '~> 3.7.3.204'
+gem 'newrelic_rpm', '~> 6.3.0.355'
 
 # Access an IRB console on exception pages or by using <%= console %> in views
 gem 'web-console', '~> 2.0', group: :development
