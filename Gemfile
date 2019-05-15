@@ -32,7 +32,7 @@ gem 'rails-erd', group: [:development, :test]
 gem 'rails_12factor', group: :production
 gem 'rollbar', '~> 0.12.13', group: :production # for error reporting
 
-gem 'watir-webdriver', group: :test
+gem 'watir', '~> 6.0', group: :test
 gem 'cucumber-rails', require: false, group: :test
 gem 'database_cleaner', group: :test
 gem 'headless', group: :test
