@@ -1,13 +1,13 @@
-## Oct 19 & 20, 2018 - Ann Arbor, MI
-## 2018 Call for Proposals (CFP)
+## Oct 18 & 19, 2019 - Dayton, OH
+## 2019 Call for Proposals (CFP)
 
-<strong>Submissions are open until Mon July 30, 2018 at 5pm ET.</strong> All submitters will be notified about whether they have been selected or not by the end of August at the latest.
+<strong>Submissions are open until Mon July 1, 2019 at 5pm ET.</strong> All submitters will be notified about whether they have been selected or not by the end of July at the latest.
 
 We pay speakers for airfare/mileage and hotel costs. We prefer that you book what you'd like and we reimburse you; we're happy to book directly for you if that would be easier.
 
 Childcare will be paid for by the conference. We will work with you to find a licensed childcare provider at your hotel.
 
-We're so excited that you're submitting to Rust Belt Rust 2018! If you have any questions, please email <a href="mailto:cfp@rust-belt-rust.com">cfp@rust-belt-rust.com</a>. That address goes to Rust Belt Rust organizers who have recused themselves from the blinded rounds of review.
+We're so excited that you're submitting to Rust Belt Rust 2019! If you have any questions, please email <a href="mailto:cfp@rust-belt-rust.com">cfp@rust-belt-rust.com</a>. That address goes to Rust Belt Rust organizers who have recused themselves from the blinded rounds of review.
 
 Please feel free to submit more than one proposal! We will only choose at most one talk per person.
 
@@ -15,7 +15,7 @@ Speakers are required to agree to abide by our <a href="https://rust-belt-rust.c
 
 ### What we're looking for
 
-Rust Belt Rust 2018 is going to be two days long. Day 1 will be for more interactive, longer workshop-style talks. Both full (6 hour) and half (3 hour) day workshops will be considered. Day 2 will be a single track of talks around 30 minutes in length.
+Rust Belt Rust 2019 is going to be two days long. Day 1 will be for more interactive, longer workshop-style talks. Both full (6 hour) and half (3 hour) day workshops will be considered. Day 2 will be a single track of talks around 30 minutes in length.
 
 We're open to any topics related to the Rust programming language!
 
