@@ -70,6 +70,8 @@ Question.create! blind: balancing_info, required: false, label: "Are you from th
 Question.create! blind: make_life_easier, required: true, label: "Bio for the website, about a paragraph", kind: "textarea", position: position
 Question.create! blind: make_life_easier, required: true, label: "URL to a headshot or avatar", kind: "text", position: position(true)
 Question.create! blind: make_life_easier, required: true, label: "Will you need childcare?", kind: "radio", values: "Yes,No", position: position, group: "childcare"
+Question.create! blind: make_life_easier, required: true, label: "T-shirt cut", kind: "radio", values: "Boxy (aka Mens/\"Unisex\"),Fitted (aka Womens)", position: position, group: "shirt_cut"
+Question.create! blind: make_life_easier, required: true, label: "T-shirt size", kind: "radio", values: "XS,S,M,L,XL,2XL,3XL,4XL,5XL", position: position, group: "shirt_size"
 
 # Admin users
 admins = [
