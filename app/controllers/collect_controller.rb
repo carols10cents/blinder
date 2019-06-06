@@ -12,7 +12,7 @@ class CollectController < ApplicationController
 
   def new
     if params[:event_slug]
-      @event = Event.where(slug: params[:event_slug]).includes(blinds: :questions).first
+      @event = Event.where(slug: params[:event_slug]).includes(blinds: :questions).first!
     else
       @event = Event.active.any? ? Event.active.includes(blinds: :questions).first : Event.includes(blinds: :questions).last
     end
