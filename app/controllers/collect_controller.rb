@@ -4,7 +4,7 @@ class CollectController < ApplicationController
 
   def home
     if params[:event_slug]
-      @event = Event.where(slug: params[:event_slug]).first.decorate
+      @event = Event.where(slug: params[:event_slug]).first!.decorate
     else
       @event = Event.active.any? ? Event.active.first.decorate : Event.last.decorate
     end
