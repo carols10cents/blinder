@@ -14,7 +14,7 @@ module ReviewHelper
 
   def scrub_vars_for(response)
     {
-      scrub:       response.scrub || response.value || Scrub.new, #I'm so damn lazy.
+      scrub:       response.scrub || Scrub.new, #I'm so damn lazy.
       response_id: response.id,
       passed_blind_level: response.question.blind.level + 1
     }
