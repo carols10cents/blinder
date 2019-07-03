@@ -19,7 +19,7 @@ class NotesController < ApplicationController
   protected
 
   def note_ajax_params
-    params.permit(note: [:proposal_id, :content])
+    params.permit(note: [:proposal_id, :content, :score])
   end
 
 end
