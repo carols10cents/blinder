@@ -18,6 +18,8 @@ gem 'omniauth', '~> 1.9.0'
 gem 'omniauth-github', '~> 1.1.1'
 gem 'pg', '~> 0.17.1'
 
+gem 'kramdown', '~> 2.1.0'
+
 gem 'draper', '~>1.3'
 
 gem 'newrelic_rpm', '~> 6.3.0.355'
