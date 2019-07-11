@@ -29,7 +29,11 @@ Blinder::Application.routes.draw do
 
   namespace :control do
     resources :events, only: [:index, :edit, :update], param: :slug do
-      resources :proposals, except: [:create]
+      resources :proposals, except: [:create] do
+        collection do
+          get 'export'
+        end
+      end
     end
   end
 end
